@@ -1,6 +1,19 @@
 body{
     margin: 0;
     padding: 0;
-    background: url(background_image.JPG);
-    color: #000000
+    background-image: url('images/background_image.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    color: #000000;
+}
+
+div.centered{
+    background-color: #FFFFFF;
+    color: #000000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
