@@ -1,23 +1,27 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = ""; //Currently there is no password, Wooh! SECURITY!
-$dbname = "chat_users";
+    $servername = "127.0.0.1";
+    $username = "root";
+    $password = "";
+    $dbname = "chat_users";
+    $Username = $_POST['uname'];
+    $Pw = $_POST['pw'];
+    $Email = $_POST['email'];
 
-//Create connection
-$connection = new mysqli($servername, $username, $password, $dbname);
-//Check connection
-if($connection->connect_error){
-    die("Connection failed: " . $connection->connect_error);
-}
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
 
-$sql = "INSERT INTO 'users'(username, pw, email) VALUES('{$_POST['uname']}','{$_POST['pw']}',' {$_POST['email']}')";
+    $sql = "INSERT INTO users (Username, Pw, Email)
+    VALUES ('{$Username}', '{$Pw}', '{$Email}')";
 
-if($connection->query($sql) === TRUE){
-    echo "New user created successfully";
-} else{
-    echo "Error: " . $sql. "<br>" . $connection->error;
-}
+    if (mysqli_query($conn, $sql)) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
 
-$connectoin->close();
+    mysqli_close($conn);
 ?>

@@ -10,7 +10,7 @@
     <div class="centered">
         <fieldset>
             <legend>Login</legend>
-            <form action="<!--Need to make a php thing, probably-->" methos="POST">
+            <form action="//localhost/TWSMMiniProject/WIP/NicolaiTesting/login.php" methos="POST">
                 <label for="uname">Username:</label>
                 <input type="text" id="uname" name="uname"></br></br>
                 <label for="pw">Password:</label>
