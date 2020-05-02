@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="centered">
-        <form action="register2.php" method="post">
+        <form action="//localhost/TWSMMiniProject/WIP/NicolaiTesting/register2.php" method="post">
             <fieldset>
                 <legend>Register</legend>
                 <label for="uname">Choose Username:</label>
@@ -20,7 +20,7 @@
                 <label for="email">Enter Email:</label>
                 <input type="text" id="email" name="email"></br></br>
                 <input class="textfont" type="submit" value="Register">
-                <a href="nicolaiLogin.html">Cancel</a>
+                <a href="nicolaiLogin.php">Cancel</a>
             </fieldset>
         </form>
     </div>
