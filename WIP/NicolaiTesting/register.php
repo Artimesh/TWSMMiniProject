@@ -3,6 +3,9 @@
     $username = "root";
     $password = "";
     $dbname = "chat_users";
+
+    //TODO:
+    //Check if fields are empty.
     $Username = $_POST['uname'];
     $Pw = $_POST['pw'];
     $Email = $_POST['email'];
