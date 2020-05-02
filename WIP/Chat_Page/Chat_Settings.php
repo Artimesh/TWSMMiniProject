@@ -9,8 +9,8 @@
 <body>
 <div class="chat_main">
     <div class="top_menu">
-        <h2 class="top_menu_item">Chat</h2>
-        <h2 class="top_menu_item">Files</h2>
+        <h2 class="top_menu_item" href="Chat_Main.php">Chat</h2>
+        <h2 class="top_menu_item" href="Chat_Files.php">Files</h2>
         <h2 class="top_menu_item">Settings</h2>
     </div>
     <div class="side_menu">
