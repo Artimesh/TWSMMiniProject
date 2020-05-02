@@ -14,13 +14,19 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
+    //SQL query
     $sql = "INSERT INTO users (Username, Pw, Email)
     VALUES ('{$Username}', '{$Pw}', '{$Email}')";
 
+    //Tries to run the query.
     if (mysqli_query($conn, $sql)) {
-        echo "New record created successfully";
+        //successfully created user, then redirects to login page.
+        echo "New user created successfully";
+        header("refresh:3;url=//localhost/TWSMMiniProject/WIP/NicolaiTesting/nicolaiLogin.php");
     } else {
+        //Prints error message and redirects to register page
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        header("refresh:3;url=//localhost/TWSMMiniProject/WIP/NicolaiTesting/nicolaiRegister.php");
     }
 
     mysqli_close($conn);

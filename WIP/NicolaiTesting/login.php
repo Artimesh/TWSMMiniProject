@@ -14,17 +14,28 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $sql = "SELECT * FROM users WHERE Username = '$Username'";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_array(($result));
-    if (mysqli_query($conn, $sql)) {
-        if($row['Username'] === $Username and $row['Pw'] === $Pw){
-            echo 'Credentials match, logging in...';
-            header("refresh:3;url=//localhost/TWSMMiniProject/WIP/Chat_Page/Chat_Main.php");
-        }else{
-            echo 'Credential mismatch.. BYEEEE';
-            header("refresh:3;url=//localhost/TWSMMiniProject/WIP/NicolaiTesting/nicolaiLogin.php");
-        }
+        //tries to run the query.
+    try{    
+        //SQL query.
+        $sql = "SELECT * FROM users WHERE Username = '$Username'";
+        //Saves query in result variable
+        $result = mysqli_query($conn, $sql);
+        //stores row from result in row variable.
+        $row = mysqli_fetch_array(($result));
+    } catch(Exception $e){
+        echo $e;
+        echo 'something went wrong :(';
+        header("refresh:3;url=//localhost/TWSMMiniProject/WIP/NicolaiTesting/nicolaiLogin.php");
+    }
+    //Checks if the typed username and password matches the stored username/password.
+    if($row['Username'] === $Username and $row['Pw'] === $Pw){
+        echo 'Credentials match, logging in...';
+        //redirects to the chat.
+        header("refresh:3;url=//localhost/TWSMMiniProject/WIP/Chat_Page/Chat_Main.php");
+    }else{
+        echo 'Credential mismatch.. BYEEEE';
+        //redirects to the login page.
+        header("refresh:3;url=//localhost/TWSMMiniProject/WIP/NicolaiTesting/nicolaiLogin.php");
     }
 
     mysqli_close($conn);
