@@ -20,10 +20,11 @@
     if (mysqli_query($conn, $sql)) {
         if($row['Username'] === $Username and $row['Pw'] === $Pw){
             echo 'Credentials match, logging in...';
-            header("Location: //localhost/TWSMMiniProject/WIP/Chat_Page/Chat_Main.php");
+            header("refresh:3;url=//localhost/TWSMMiniProject/WIP/Chat_Page/Chat_Main.php");
+        }else{
+            echo 'Credential mismatch.. BYEEEE';
+            header("refresh:3;url=//localhost/TWSMMiniProject/WIP/NicolaiTesting/nicolaiLogin.php");
         }
-    } else {
-        echo 'help';
     }
 
     mysqli_close($conn);

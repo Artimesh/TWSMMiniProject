@@ -10,8 +10,8 @@
 <div class="chat_main">
     <div class="top_menu">
         <h2 class="top_menu_item">Chat</h2>
-        <h2 class="top_menu_item" href="Chat_Files.php">Files</h2>
-        <h2 class="top_menu_item" href="Chat_Settings.php">Settings</h2>
+        <h2 class="top_menu_item" ><a href="Chat_Files.php">Files</a></h2>
+        <h2 class="top_menu_item"><a href="Chat_Settings.php">Settings</a></h2>
     </div>
     <div class="side_menu">
         <h2 class="users_online">Users Online</h2>
