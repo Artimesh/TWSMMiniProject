@@ -8,17 +8,17 @@
 </head>
 <body>
     <div class="centered">
-        <fieldset>
-            <legend>Login</legend>
-            <form action="//localhost/TWSMMiniProject/WIP/NicolaiTesting/login.php" methos="POST">
+        <form action="//localhost/TWSMMiniProject/WIP/NicolaiTesting/login.php" method="POST">
+            <fieldset>
+                <legend>Login</legend>    
                 <label for="uname">Username:</label>
                 <input type="text" id="uname" name="uname"></br></br>
                 <label for="pw">Password:</label>
                 <input type="password" id="pw" name="pw"></br></br>
                 <input class="textfont" type="submit" value="Connect">
-                <a href="nicolaiRegister.php">Register</a>
-            </form>
-        </fieldset>
+                <a href="nicolaiRegister.php">Register</a>            
+            </fieldset>
+        </form>
     </div>
 </body>
 </html>

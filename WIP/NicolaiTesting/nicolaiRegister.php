@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="centered">
-        <form action="//localhost/TWSMMiniProject/WIP/NicolaiTesting/register.php" method="post">
+        <form action="//localhost/TWSMMiniProject/WIP/NicolaiTesting/register.php" method="POST">
             <fieldset>
                 <legend>Register</legend>
                 <label for="uname">Choose Username:</label>
