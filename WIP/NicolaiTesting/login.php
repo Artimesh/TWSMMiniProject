@@ -4,6 +4,8 @@
     $password = "";
     $dbname = "chat_users";
 
+    $cookie_name = "username";
+
     $Username = $_POST['uname'];
     $Pw = $_POST['pw'];
 
@@ -30,6 +32,10 @@
     //Checks if the typed username and password matches the stored username/password.
     if($row['Username'] === $Username and $row['Pw'] === $Pw){
         echo 'Credentials match, logging in...';
+        
+        //Creates cookie which saves username
+        setcookie($cookie_name, $Username, time() + (86400 * 30), "/"); //Cookie expires after 30 days.
+
         //redirects to the chat.
         header("refresh:3;url=//localhost/TWSMMiniProject/WIP/Chat_Page/Chat_Main.php");
     }else{
