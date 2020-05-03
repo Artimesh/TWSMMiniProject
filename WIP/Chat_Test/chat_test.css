@@ -1,0 +1,32 @@
+body {
+    margin: 0; 
+    overflow: hidden;
+}
+
+#messages {
+    height: 88vh;
+    overflow-x: hidden;
+    padding: 10px;
+    background-color: mistyrose;
+
+}
+
+form {
+    display: flex; 
+
+}
+
+input {
+    font-size: medium;
+    padding: 10px;
+    margin: 5px 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    border-radius: 5px;
+
+}
+
+#message {
+    flex: 2;
+}
