@@ -16,7 +16,7 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-        //tries to run the query.
+    //tries to run the query.
     try{    
         //SQL query.
         $sql = "SELECT * FROM users WHERE Username = '$Username'";
@@ -27,7 +27,7 @@
     } catch(Exception $e){
         echo $e;
         echo 'something went wrong :(';
-        header("refresh:3;url=//localhost/TWSMMiniProject/WIP/NicolaiTesting/nicolaiLogin.php");
+        header("refresh:3;url=//localhost/TWSMMiniProject/WIP/NicolaiTesting/nicolaiLogin.html");
     }
     //Checks if the typed username and password matches the stored username/password.
     if($row['Username'] === $Username and $row['Pw'] === $Pw){
@@ -37,11 +37,11 @@
         setcookie($cookie_name, $Username, time() + (86400 * 30), "/"); //Cookie expires after 30 days.
 
         //redirects to the chat.
-        header("refresh:3;url=//localhost/TWSMMiniProject/WIP/Chat_Page/Chat_Main.php");
+        header("refresh:3;url=//localhost/TWSMMiniProject/WIP/Chat_Page/Chat_Main.html");
     }else{
         echo 'Credential mismatch.. BYEEEE';
         //redirects to the login page.
-        header("refresh:3;url=//localhost/TWSMMiniProject/WIP/NicolaiTesting/nicolaiLogin.php");
+        header("refresh:3;url=//localhost/TWSMMiniProject/WIP/NicolaiTesting/nicolaiLogin.html");
     }
 
     mysqli_close($conn);

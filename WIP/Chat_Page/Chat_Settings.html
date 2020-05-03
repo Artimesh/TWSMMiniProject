@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <link href="Chat_CSS.css" rel="stylesheet" type="text/css">
-
+<script src="Chat.js"></script>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -9,8 +9,8 @@
 <body>
 <div class="chat_main">
     <div class="top_menu">
-        <h2 class="top_menu_item" ><a href="Chat_Main.php">Chat</a></h2>
-        <h2 class="top_menu_item" ><a href="Chat_Files.php">Files</a></h2>
+        <h2 class="top_menu_item" ><a href="Chat_Main.html">Chat</a></h2>
+        <h2 class="top_menu_item" ><a href="Chat_Files.html">Files</a></h2>
         <h2 class="top_menu_item">Settings</h2>
     </div>
     <div class="side_menu">
@@ -31,7 +31,9 @@
             <label for="notif_sound">Notification Sound</label>
         </div>
         <div class="settings_wrapper">
-            <button id="logout">Logout</button>
+            <button id="logout" onclick="LogMeOut()">
+                <a href="//localhost/TWSMMiniProject/WIP/NicolaiTesting/nicolaiLogin.html">Logout</a>
+            </button>
         </div>
     </div>
 </div>
