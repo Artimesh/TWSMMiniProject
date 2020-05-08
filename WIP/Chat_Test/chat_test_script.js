@@ -22,17 +22,20 @@ $(document).ready(function(){
 
 function load(){
     $.get(url + '?start=' + start, function(result){
-        if(result.items){}
+        if(result.items){
             result.items.forEach(item =>{
                 start = item.ID; 
                 $('#Messages').append(renderMessage(item)); 
-            })
-        };
+            }); 
+            $('#messages').animate({scrollTop: $('#messages')[0].scrollHeight}); 
+        }; 
         load(); 
-
-    }); 
+    });   
 }
 
 function renderMessage(item){
-    console.log(item);
+    //console.log(item);
+    let time = new Date(item.created); 
+    time = '${time.getHours()}:${time.getMinutes()};'
+    return '<div class="msg"><p>$(item.from)</p>$(item.Message)<span>$time</span></div>';
 }

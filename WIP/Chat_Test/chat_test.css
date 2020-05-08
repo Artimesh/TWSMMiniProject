@@ -30,3 +30,21 @@ input {
 #message {
     flex: 2;
 }
+
+.msg {
+    background-color: aquamarine;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: fit-content; 
+}
+
+.msg p {
+    margin: 0px; 
+    font-weight: bold;
+}
+
+.msp span {
+    font-size: 0.7rem;
+    margin-left: 15px;
+}
