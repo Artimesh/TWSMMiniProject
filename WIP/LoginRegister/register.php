@@ -25,20 +25,20 @@
             if (mysqli_query($conn, $sql)) {
                 //successfully created user, then redirects to login page.
                 echo "New user created successfully";
-                header("refresh:3;url=//localhost/TWSMMiniProject/WIP/NicolaiTesting/nicolaiLogin.html");
+                header("refresh:3;url=//localhost/TWSMMiniProject/WIP/LoginRegister/Login.html");
             } else {
                 //Prints error message and redirects to register page
                 echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                header("refresh:3;url=//localhost/TWSMMiniProject/WIP/NicolaiTesting/nicolaiRegister.html");
+                header("refresh:3;url=//localhost/TWSMMiniProject/WIP/LoginRegister/Register.html");
             }
 
             mysqli_close($conn);
         } catch(Exception $e){
             echo $e;
-            header("refresh:3;url=//localhost/TWSMMiniProject/WIP/NicolaiTesting/nicolaiRegister.html");
+            header("refresh:3;url=//localhost/TWSMMiniProject/WIP/LoginRegister/Register.html");
         }
     } else {
         echo 'Please fill in all textfields...';
-        header("refresh:3;url=//localhost/TWSMMiniProject/WIP/NicolaiTesting/nicolaiRegister.html");
+        header("refresh:3;url=//localhost/TWSMMiniProject/WIP/LoginRegister/Register.html");
     }
 ?>
