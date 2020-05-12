@@ -1,23 +1,23 @@
     var from = null; //This is probably what needs to be changed to take information from the cookie storing the username 
     var start = 0; 
-    var url = "http://localhost/chat_test.php"; 
+    var url = "http://localhost/TWSMMiniProject/WIP/Chat_Test/chat_test.php"; 
+
 
 
 $(document).ready(function(){
 
-    //alert("jquery ready"); 
-   from = prompt("Please enter your name:"); //Asking for a username - replace/remove for final version
-   //alert("Hello " + from); 
-   load(); 
-
-   $('form').submit(function(e){
+    from = prompt("Please enter your name:"); //Asking for a username - replace/remove for final version
+    load(); 
+    /*
+    $('form').submit(function(e){
         $.post(url, {
-            Message: $('#Message').val(), 
-            Sender : Sender 
-        })
-        $('#Message').val(''); 
+            message: $('#message').val(), 
+            from : from 
+        });
+        $('#message').val(''); 
         return false; 
-   }); 
+   });
+   */ 
 }); 
 
 function load(){
@@ -25,7 +25,7 @@ function load(){
         if(result.items){
             result.items.forEach(item =>{
                 start = item.ID; 
-                $('#Messages').append(renderMessage(item)); 
+                $('#messages').append(renderMessage(item)); 
             }); 
             $('#messages').animate({scrollTop: $('#messages')[0].scrollHeight}); 
         }; 

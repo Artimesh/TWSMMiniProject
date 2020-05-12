@@ -3,19 +3,19 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chatroom</title>
-
-    <!--<script type="text/javascript" src="chat_test_script.js"></script>
-    <script type="text/javascript"></script>-->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <script src="chat_test_script.js"></script>
+    <!--<script type="text/javascript" src="chat_test_script.js"></script>
+    <script type="text/javascript"></script>-->
 
 </head>
 
 <body>
     <div id="messages"></div>
-    <form>
-        <input type="text" id="message" autocomplete="off" autofocus placeholder="Type something...">
+    <form action="//localhost/TWSMMiniProject/WIP/Chat_Test/chat_to_save.php" method="POST">
+        <input type="text" id="message" name="message" autocomplete="off" autofocus placeholder="Type something...">
         <input type="submit" value="Send">
     </form>
 </body>
