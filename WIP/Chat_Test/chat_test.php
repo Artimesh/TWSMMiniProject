@@ -1,7 +1,7 @@
 <?php
 
 //Connection to database - port, user, password, server name
-$db = new mysqli("localhist", "root", "", "messages"); 
+$db = new mysqli("localhist", "root", " ", "messages"); 
 
 //if there's a connection error DIE >:3c
 if($db->connect_error){
@@ -17,7 +17,7 @@ $Sender = isset($_POST['Sender']) ? $_POST['Sender'] : null;
 //If both message and sender is empty...
 if(!empty($Message) && !empty($Sender)){
     //... insert data into the database 
-    $sql = "INSERT INTO 'messages' ('Message', 'Sender') VALUES ('".$Message."','".$Sender."')"; 
+    $sql = "INSERT INTO messages (Message, Sender) VALUES ('{$Message}','{$Sender}')"; 
     $result['send_status'] = $db->query($sql); 
 }
 

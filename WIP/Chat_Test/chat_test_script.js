@@ -13,7 +13,7 @@ $(document).ready(function(){
    $('form').submit(function(e){
         $.post(url, {
             Message: $('#Message').val(), 
-            Sender : Sender; 
+            Sender : Sender 
         })
         $('#Message').val(''); 
         return false; 
