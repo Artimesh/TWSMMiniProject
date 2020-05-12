@@ -3,12 +3,8 @@
     var url = "http://localhost/chat_test2.php"; 
 
 
-$(document).ready(function(){
 
-    //alert("jquery ready"); 
-   from = prompt("Please enter your name:"); //Asking for a username - replace/remove for final version
-   //alert("Hello " + from); 
-   load(); 
+$(document).ready(function(){
 
    $('form').submit(function(e){
         $.post(url, {
@@ -17,16 +13,16 @@ $(document).ready(function(){
         })
         $("#Message").val(''); 
         return false; 
-   }); 
+   });
 }); 
 
 function load(){
-    $.get(url + '?start=' + start, function(result){
+    $.get(chat + '?start=' + start, function(result){
         if(result.items){
             result.items.forEach(item =>{
                 start = item.ID; 
-                $('#Messages').append(renderMessage(item)); 
-            }); 
+                $('#messages').append(renderMessage(item)); 
+            })
             $('#messages').animate({scrollTop: $('#messages')[0].scrollHeight}); 
         }; 
         load(); 

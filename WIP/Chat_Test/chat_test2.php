@@ -10,7 +10,11 @@ header("Content-Type: application/json; charset=UTF-8");
     $servername = "127.0.0.1";
     $username = "root";
     $password = "";
-    $dbname = "messages";
+    $dbname = "chat_users";
+
+    header('Access-Control-Allow-Origin: *');
+    header('Content-Type: application/json');
+
     try{       
         // Create connection
         $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -22,10 +26,10 @@ header("Content-Type: application/json; charset=UTF-8");
 
         //Define items in the server
         $result = array(); 
-        $Message = isset($_POST['Message']) ? $_POST['Message'] : null; 
-        $Sender = isset($_POST['Sender']) ? $_POST['Sender'] : null; 
+        $Message = isset($_POST['message']) ? $_POST['message'] : null; 
+        $Sender = isset($_POST['from']) ? $_POST['from'] : null; 
         if(!empty($Message) && !empty($Sender)){
-            $sql = "INSERT INTO messages (Message, Sender) 
+            $sql = "INSERT INTO chat ('message', 'from') 
             VALUES ('{$Message}','{$Sender}')";
             
         }
@@ -54,5 +58,5 @@ header("Content-Type: application/json; charset=UTF-8");
         echo json_encode($result); 
     } catch(Exception $e){
         echo $e;
-    }
+    */ 
 ?>
