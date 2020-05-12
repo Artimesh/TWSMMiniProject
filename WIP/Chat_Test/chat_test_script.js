@@ -1,6 +1,6 @@
     var from = null; //This is probably what needs to be changed to take information from the cookie storing the username 
     var start = 0; 
-    var url = "http://localhost/chat_test.php"; 
+    var url = "http://localhost/chat_test2.php"; 
 
 
 $(document).ready(function(){
@@ -12,10 +12,10 @@ $(document).ready(function(){
 
    $('form').submit(function(e){
         $.post(url, {
-            Message: $('#Message').val(), 
+            Message: $("#Message").val(), 
             Sender : Sender 
         })
-        $('#Message').val(''); 
+        $("#Message").val(''); 
         return false; 
    }); 
 }); 

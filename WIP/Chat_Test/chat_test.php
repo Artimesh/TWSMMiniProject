@@ -1,7 +1,7 @@
 <?php
 
 //Connection to database - port, user, password, server name
-$db = new mysqli("localhist", "root", " ", "messages"); 
+$db = new mysqli("localhost", "root", " ", "messages"); 
 
 //if there's a connection error DIE >:3c
 if($db->connect_error){
