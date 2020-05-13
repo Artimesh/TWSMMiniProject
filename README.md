@@ -7,7 +7,7 @@ The website will be developed with PHP+MySQL+JS(incl. jQuery)
 We're using XAMPP, and due to scripts the whole thing should be put in a folder called TWSMMiniProject in the htdocs folder in the XAMPP folder. 
 My current path: D:\xampp\htdocs\TWSMMiniProject\
 
-Currently tries to connecto to a database called chat_users with two tables:
+Currently tries to connecto to a MySQL database called chat_users with two tables:
 Create table using SQL:
 
 --- chat ---
