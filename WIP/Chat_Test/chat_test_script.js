@@ -1,17 +1,20 @@
     var from = null; //This is probably what needs to be changed to take information from the cookie storing the username 
     var start = 0; 
-    var url = "http://localhost/chat_test2.php"; 
+    var url = "http://localhost/TWSMMiniProject/WIP/Chat_Test/get_chat_messages.php";
+    var chat = "http://localhost/TWSMMiniProject/WIP/Chat_Test/chat_to_save.php";
 
 
 
 $(document).ready(function(){
 
-   $('form').submit(function(e){
-        $.post(url, {
-            Message: $("#Message").val(), 
-            Sender : Sender 
-        })
-        $("#Message").val(''); 
+    //from = prompt("Please enter your name:"); //Asking for a username - replace/remove for final version
+    load();
+    $('form').submit(function(e){
+        $.post(chat, {
+            message: $('#message').val(), 
+            from: from 
+        });
+        $('#message').val(''); 
         return false; 
    });
 }); 
@@ -32,6 +35,6 @@ function load(){
 function renderMessage(item){
     //console.log(item);
     let time = new Date(item.created); 
-    time = '${time.getHours()}:${time.getMinutes()};'
-    return '<div class="msg"><p>$(item.from)</p>$(item.Message)<span>$time</span></div>';
+    time = `${time.getHours()}:${time.getMinutes()};`
+    return `<div class="msg"><p>${item.from}</p>${item.Message}<span>$time</span></div>`;
 }

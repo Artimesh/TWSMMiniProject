@@ -7,7 +7,6 @@
     $password = "";
     $dbname = "chat_users";
 
-    $result = array();
     $conn = mysqli_connect($servername, $username, $password, $dbname);
     // Check connection
     if (!$conn) {
@@ -15,12 +14,15 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
+    
     $sql = "SELECT * FROM 'chat' WHERE 'id' >" . $start;
     $start = isset($_GET['start']) ? intval($_GET['start']) : 0; 
-    $items = mysqli_query($conn, $sql);
-    
-    while($row = $items->fetch_assoc()){
-        $result['items'][] = $row; 
+
+    if($result = mysqli_query($conn, $sql)){
+        while($row = mysqli_fetch_assoc($result)){
+            $result['items'][] = $row; 
+        }
+        mysqli_free_result($result);
     }
 
     mysqli_close($conn);
