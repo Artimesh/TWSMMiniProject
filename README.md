@@ -11,7 +11,9 @@ Currently tries to connecto to a database called chat_users with two tables:
 Create table using SQL:
 
 --- chat ---
+
 CREATE TABLE `chat_users`.`chat` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `message` TEXT NOT NULL , `from` VARCHAR(255) NOT NULL , `created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 --- users ---
+
 CREATE TABLE `chat_users`.`users` ( `ID` INT(11) NOT NULL AUTO_INCREMENT , `Username` VARCHAR(255) NOT NULL , `Pw` VARCHAR(255) NOT NULL , `Email` VARCHAR(255) NOT NULL , PRIMARY KEY (`ID`)) ENGINE = InnoDB;
