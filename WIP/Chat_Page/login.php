@@ -27,7 +27,7 @@
     } catch(Exception $e){
         echo $e;
         echo 'something went wrong :(';
-        header("refresh:3;url=//localhost/TWSMMiniProject/WIP/LoginRegister/Login.html");
+        header("refresh:3;url=//localhost/TWSMMiniProject/WIP/Chat_Page/Login.html");
     }
     //Checks if the typed username and password matches the stored username/password.
     if($row['Username'] === $Username and $row['Pw'] === $Pw){
@@ -41,7 +41,7 @@
     }else{
         echo 'Credential mismatch.. BYEEEE';
         //redirects to the login page.
-        header("refresh:3;url=//localhost/TWSMMiniProject/WIP/LoginRegister/Login.html");
+        header("refresh:3;url=//localhost/TWSMMiniProject/WIP/Chat_Page/Login.html");
     }
 
     mysqli_close($conn);

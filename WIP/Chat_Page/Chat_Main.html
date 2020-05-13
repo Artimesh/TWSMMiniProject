@@ -5,6 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Chatroom</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
 </head>
 <body>
 <div class="chat_main">
@@ -24,14 +25,17 @@
     <div class="chat_box">
         <div class="chat_input">
             <div id="textarea_wrapper">
-                <textarea></textarea>
+                <form>
+                    <input type="text" id="message" name="message" autocomplete="off" autofocus placeholder="Type something...">
+                    <input type="submit" value="Send">   
+                </form>
             </div>  
             <div id="button_wrapper">
-                <button>Send</button>
                 <button><a href="//localhost/TWSMMiniProject/WIP/Chat_Page/Upload_Files.html">Upload</a></button>
             </div>
         </div>
     </div>
 </div>
+<script src="chat_test_script.js"></script>
 </body>
 </html>
