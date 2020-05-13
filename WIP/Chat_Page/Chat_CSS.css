@@ -3,68 +3,86 @@ head {
 }
 
 body {
-
+    background-color: #BDD3CA; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 h2 {
    font-size: 20px; 
+   color: #DCF2CA;
 }
 
 h3 {
     font-size: 17px;
+    color: #DCF2CA;
+}
+
+a {
+    text-decoration: none;
+    color: #DCF2CA; 
 }
 
 .chat_main {
     width: auto;
     height: auto;
     /*color: blue;*/
-    background-color: #806798;
+    background-color: #599F81;
     clear: both;
     overflow: hidden;
+    border-color: #071722;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 2px;
+    padding-bottom: 5px;
+
 }
 
 .top_menu {
     height: 50px;
-    width: 80%; 
+    width: 70%; 
     /*color: red;*/
     float: left;
     clear: both;
-    
+    padding-top: 3px;
+    padding-left: 80px;
 }
 
 .top_menu_item {
     padding-left: 100px;
     padding-right: 100px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    background-color: #FFFCC9;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #6FA741;
     display: table-cell;
     vertical-align: inherit;
     font-weight: bold;
     text-align: center;
     border-style: solid;
-    border-width: 2px;
-    border-color: #8AAD57;
+    border-width: 3px;
+    border-color: rgb(25, 48, 6);
     border-radius: 5px;
 }
 
 .side_menu {
-    height: 500px; 
-    width: 20%;
+    height: 100%; 
+    width: 19.6%;
     /*color: green;*/
-    background-color: #806798;
+    background-color: #599F81;
     float: right;
+    /*border-style: solid;
+    border-width: 2px;
+    border-color: #071722;*/
 }
 
 .users_online {
     text-align: center;
-    border-style: solid;
+    /*border-style: solid;
     border-width: 2px;
-    border-color: #8AAD57;
+    border-color: #071722;
     border-radius: 5px;
-    background-color: #FFFCC9;
+    background-color: #FFFCC9;*/
     padding-bottom: 12px;
-    padding-top: 12px;
+    padding-top: 50px;
     margin-top: 0px;
 }
 
@@ -79,7 +97,7 @@ ul {
 .chat_box {
     width: 80%;
     height: 450px;
-    background-color: #CEC4D8;
+    background-color: #BDD3CA;
     float: left;
 }
 
@@ -88,7 +106,7 @@ ul {
     height: 55px;
     margin-top: 410px;
     clear: both;
-    background-color: #806798;
+    background-color: #599F81;
 }
 
 #textarea_wrapper {
@@ -107,11 +125,12 @@ textarea {
     float: right; 
     width: 25%;
     height: 100%;
+    padding-top: 3px;
 }
 
 button {
     text-align: center;
-    background-color: #ECD4DF;
+    background-color: #6FA741;
     border: none;
     display: inline-block;
     padding: 10px 32px;
@@ -119,9 +138,12 @@ button {
     margin-left: 10px;
     border-style: solid;
     border-width: 2px;
-    border-color: #BE7C9A;
+    border-color: rgb(25, 48, 6);
     border-radius: 5px;
+    color: #DCF2CA;
 }
+
+/*---------File Page---------*/
 
 #file_box_wrapper {
     width: 100%; 
@@ -132,20 +154,57 @@ button {
 .file_box {
     width: 30%;
     height: 99%;
-    background-color: #ECD4DF;
     float: left;
+    /*background-color: #ECD4DF;
     border-style: solid;
     border-width: 2px;
-    border-color: #BE7C9A;
-    margin-left: 20px;
     border-radius: 5px;
+    border-color: #071722;*/
+    margin-left: 20px;
 }
 
 .file_box h3{
     text-align: center;
+    color: #DCF2CA;
 }
+
+/*------ Settings Page--------*/
 
 .settings_wrapper {
     margin-top: 10px;
     margin-left: 10px;
+}
+
+/*-------Login page--------*/
+
+div.centered{
+    /*background-color: #FFFFFF;*/
+    /*background: linear-gradient(110deg, #70ff38 60%, #23f8ff 60%);*/
+    border-radius: 10px;
+    border-color: rgb(25, 48, 6);;
+    border-style: solid;
+    border-width: 3px;
+    position: fixed;
+    background-color: #599F81;
+    color: #DCF2CA;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 5px 10px; 
+}
+
+.textfont{
+    /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
+}
+
+fieldset {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 0px groove;
 }
