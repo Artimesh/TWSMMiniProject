@@ -49,9 +49,11 @@ header("Content-Type: application/json; charset=UTF-8");
         $start = isset($_GET['start']) ? intval($_GET['start']) : 0; 
         $sql2 = ("SELECT * FROM messages WHERE ID >" . $start);
         $items = mysqli_query($conn, $sql2); 
-        while($row = $items->fetch_assoc()){
-          $result['items'][] = $row; 
-        }
+
+        $row = $items->fetch_assoc()
+        $result['items'][] = $row; 
+        echo $sql2; 
+        
 
         mysqli_close($conn);
 
