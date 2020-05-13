@@ -1,13 +1,9 @@
-    var from = null; //This is probably what needs to be changed to take information from the cookie storing the username 
-    var start = 0; 
-    var url = "http://localhost/TWSMMiniProject/WIP/Chat_Test/get_chat_messages.php";
-    var chat = "http://localhost/TWSMMiniProject/WIP/Chat_Test/chat_to_save.php";
-
-
+var from = null; 
+var start = 0; 
+var url = "http://localhost/TWSMMiniProject/WIP/Chat_Test/get_chat_messages.php";
+var chat = "http://localhost/TWSMMiniProject/WIP/Chat_Test/chat_to_save.php";
 
 $(document).ready(function(){
-
-    //from = prompt("Please enter your name:"); //Asking for a username - replace/remove for final version
     load();
     $('form').submit(function(e){
         $.post(chat, {
@@ -20,6 +16,7 @@ $(document).ready(function(){
 }); 
 
 function load(){
+    console.log("Hello");
     $.get(chat + '?start=' + start, function(result){
         if(result.items){
             result.items.forEach(item =>{
@@ -29,7 +26,7 @@ function load(){
             $('#messages').animate({scrollTop: $('#messages')[0].scrollHeight}); 
         }; 
         load(); 
-    });   
+    });
 }
 
 function renderMessage(item){
